@@ -1,0 +1,83 @@
+---
+  const { items } = Astro.props;
+---
+
+<div class="relative overflow-x-auto mt-6">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Name
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Author
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Genre
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Language
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Year of publication
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+          {items.map((index, item) => (
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700" key={index}>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  {item.name}
+                </th>
+                <td class="px-6 py-4">
+                  {item.author}
+                </td>
+                <td class="px-6 py-4">
+                  {item.genre} 
+                </td>
+                <td class="px-6 py-4">
+                    {item.language}
+                </td>
+                <td class="px-6 py-4">
+                  {item.year}
+                </td> 
+            </tr>
+          ))}
+            <tr class="bg-white border-b">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                  Dune
+                </th>
+                <td class="px-6 py-4 text-gray-600">
+                  Frank Herbert
+                </td>
+                <td class="px-6 py-4 text-gray-600">
+                  Science Fiction 
+                </td>
+                <td class="px-6 py-4 text-gray-600">
+                  English
+                </td>
+                <td class="px-6 py-4 text-gray-600">
+                  1965
+                </td> 
+            </tr>
+            <tr class="bg-white border-b">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                  The Three Body Problem
+                </th>
+                <td class="px-6 py-4 text-gray-600">
+                  Liu Cixin
+                </td>
+                <td class="px-6 py-4 text-gray-600">
+                  Science Fiction 
+                </td>
+                <td class="px-6 py-4 text-gray-600">
+                  Chinese
+                </td>
+                <td class="px-6 py-4 text-gray-600">
+                  2008
+                </td> 
+            </tr>
+        </tbody>
+    </table>
+</div>
+

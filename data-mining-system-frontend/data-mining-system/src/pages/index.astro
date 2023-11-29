@@ -1,0 +1,38 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import DashboardWidget from '../components/DashboardWidget.astro';
+import Modal from '../components/Modal.astro';
+import Table from '../components/Table.astro';
+---
+
+<DefaultLayout title="Dashboard" subtitle="University Press PLC">
+  <section>
+    <h1>Welcome Admin 🧑‍🚀</h1><br>
+    <p class="size-20">Make data-driven decisions that will boost your publishing success.</p>
+  </section>
+  <section class="margin-32">
+    <div class="space-content">
+      <div class="contents">
+        <h2>Trends</h2>
+        <p id="current-time" class="size-12"></p>
+      </div>
+      <div class="grid small-grid-1 medium-grid-2 large-grid-3 equal-height">
+        <DashboardWidget 
+          number="+13"
+          title="Sales million units expected"
+        />
+        <DashboardWidget
+          number="+20"
+          title="Books sold"
+        />
+      </div>
+      <Modal action="Add" />
+    </div>
+    <Table items={[]} />
+  </section>
+</DefaultLayout>
+
+<script>
+  const date = new Date()
+  document.querySelector('#current-time').innerHTML = `<em>${date.toDateString()}</em>`
+</script>

@@ -1,0 +1,23 @@
+{
+  "name": "accessible-astro-dashboard",
+  "description": "An Accessible Dashboard Theme for Astro including a login page, a dashboard page and several other pages and components.",
+  "version": "1.1.4",
+  "author": "Mark Teekman",
+  "homepage": "https://accessible-astro.dev",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.0.2",
+    "accessible-astro-components": "^1.5.7",
+    "astro-icon": "^0.7.3",
+    "tailwindcss": "^3.3.5"
+  },
+  "devDependencies": {
+    "astro": "^3.5.3",
+    "sass": "^1.49.9"
+  }
+}
